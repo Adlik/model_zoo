@@ -3,6 +3,19 @@
 ## Content
 
 - Object detection
+- Classification
+
+## Classification
+
+| Model         | strategy           | Introduction                                                 | Pretrain weight                                              | accuracy |
+| ------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | -------- |
+| resnet18      | normal training    |                    adlik resnet18  trained with imagenet-1k                                          | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet_18_imagenet_1000.h5) | 66.834%  |
+| resnet50      | normal training    |                adlik resnet50  trained with imagenet-1k                                              | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet_50_imagenet_1000.h5) | 76.0%    |
+| resnet101     | normal training    |                      adlik resnet101  trained with imagenet-1k                                        | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet_101_imagenet_1000.h5) | 77.12%   |
+| resnet34      | normal training    |                  adlik resnet34  trained with imagenet-1k                                            | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet_34_imagenet_1000.h5) | 70.346%  |
+| resnet50-slim | prune+distillation | pruning resnet50 model and using senet154 and resnet152b as teacher models to ensemble disitll pruned model | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet50_slim.h5) | 76.458%  |
+| mobilenet v1  | normal training    |                      adlik mobilenet-v1  trained with imagenet-1k                                        | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/mobilenet_v1_imagenet_1000.h5) | 70.63%   |
+| mobilenet v2  | normal training    |                             adlik mobilenet-v2  trained with imagenet-1k                                 | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/mobilenet_v2_imagenet_1000.h5) | 72.396%  |
 
 ## Object detection
 
@@ -14,4 +27,5 @@
 
 Table Notes:
 
-* Refer to [Adlik YOLOv5](https://github.com/Adlik/yolov5) for details.
+- Refer to [model optimizer](https://github.com/Adlik/model_optimizer) for more infomation.
+- Refer to [Adlik YOLOv5](https://github.com/Adlik/yolov5) for details.
