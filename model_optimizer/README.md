@@ -27,5 +27,5 @@
 
 Table Notes:
 
-- Refer to [model optimizer](https://github.com/Adlik/model_optimizer) for more infomation.
+- Refer to [model optimizer](https://github.com/Adlik/model_optimizer) for more information.
 - Refer to [Adlik YOLOv5](https://github.com/Adlik/yolov5) for details.
