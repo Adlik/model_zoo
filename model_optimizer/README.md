@@ -27,6 +27,7 @@
 | yolov5s | distillation                | Based on the method of "Object Detection at 200 Frames Per Second"                           | [pth](https://adlik-yolov5.oss-cn-beijing.aliyuncs.com/yolov5s-distill-39.3.pt) &#124; [onnx](https://adlik-yolov5.oss-cn-beijing.aliyuncs.com/yolov5s-distill-39.3.onnx)            |
 | yolov5s | quantization                | INT8 quantization uses OpenVINO's POT tool                                                   | [xml](https://adlik-yolov5.oss-cn-beijing.aliyuncs.com/yolov5s-int8-mixed.xml) &#124; [bin](https://adlik-yolov5.oss-cn-beijing.aliyuncs.com/yolov5s-int8-mixed.bin)                 |
 | yolov5s | distillation + quantization | In order not to lose accuracy, distillation and INT8 quantization can be used simultaneously | [xml](https://adlik-yolov5.oss-cn-beijing.aliyuncs.com/yolov5s-distill-int8-mixed.xml) &#124; [bin](https://adlik-yolov5.oss-cn-beijing.aliyuncs.com/yolov5s-distill-int8-mixed.bin) |
+| yolov5m | normal training |Use [the official website code](https://github.com/ultralytics/yolov5/blob/master/export.py) to convert the model of pytorch framework to the  model of tensorrt_plan runtime (GPU:Tesla T4) <br /> Use [Adlik tensorrt runtime](https://github.com/Adlik/Adlik#:~:text=registry.cn-beijing.aliyuncs.com/adlik/serving-tensorrt%3Av0.4.0_trt7.2.1.6_cuda11.0) deploy this tensorrt_plan model| [pt](https://github.com/ultralytics/yolov5/releases/download/v6.1/yolov5m.pt) &#124; [tensorrt_plan](https://adlik-models.oss-cn-beijing.aliyuncs.com/ultralytics-yolov5.zip) |
 
 Table Notes:
 
