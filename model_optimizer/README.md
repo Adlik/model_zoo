@@ -11,14 +11,18 @@
 | ------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | -------- |
 | resnet18      | normal training    |                    adlik resnet18  trained with imagenet-1k                                          | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet_18_imagenet_1000.h5) | 66.834%  |
 | resnet50      | normal training    |                adlik resnet50  trained with imagenet-1k                                              | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet_50_imagenet_1000.h5) | 76.0%    |
-| resnet101     | normal training    |                      adlik resnet101  trained with imagenet-1k                                        | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet_101_imagenet_1000.h5) | 77.12%   |
+| resnet101     | normal training    |                      adlik resnet101  trained with imagenet-1k                                        | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet_101_imagenet_1001.h5) | 77.12%   |
 | resnet34      | normal training    |                  adlik resnet34  trained with imagenet-1k                                            | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet_34_imagenet_1000.h5) | 70.346%  |
 | resnet50-distill  |  distillation  |   using resnet101 as teacher model to distill resnet50 |  [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet_50_distill.h5)     | 77.14% |
 | resnet50-slim | pruning+distillation | pruning 50% channels of resnet50 model and using senet154 and resnet152b as teacher models to ensemble distill pruned model | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet50_slim.h5) | 76.376%  |
 | resnet50-pruned-0.25 |  pruning+distillation | pruning 25% channels of resnet50 and using senet154 and resnet152b as teacher models to ensemble distill pruned model   |  [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet50_pruned_0.25.h5)  |  78.79%   |
 | resnet50-pruned-0.375 |  pruning+distillation  | pruning 37.5% channels of resnet50 and using senet154 and resnet152b as teacher models to ensemble distill pruned model  | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet50_pruned_0.375.h5)  | 78.07% |
 | mobilenet v1  | normal training    |                      adlik mobilenet-v1  trained with imagenet-1k                                        | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/mobilenet_v1_imagenet_1000.h5) | 70.63%   |
-| mobilenet v2  | normal training    |                             adlik mobilenet-v2  trained with imagenet-1k                                 | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/mobilenet_v2_imagenet_1000.h5) | 72.396%  |
+| mobilenet v2  | normal training    |                             adlik mobilenet-v2  trained with imagenet-1k                                 | [h5](https://adlik-models.oss-cn-beijing.aliyuncs.com/mobilenet_v2_imagenet_1001.h5) | 72.396%  |
+
+### inference
+
+When using the above models for inference, please note that both mobilenetV1 and resnet101 are trained with outputs with 1001 classification and 0-index in outputs is background. Besides, do not normalize input images when inferring the above two models. In model optimizer, the related codes are [here](https://github.com/Adlik/model_optimizer/blob/master/src/model_optimizer/utils/imagenet_preprocessing.py#:~:text=return-,image_normalization(img),-Footer).
 
 ## Object detection
 
