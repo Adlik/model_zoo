@@ -28,7 +28,7 @@ When using the above models for inference, please note that both mobilenetV1 and
 ## Classification with distillation
 | Model         | Distillation strategy           | Introduction                                                 | Pretrain weight                  |
 | ------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ 
-| ResNet50-81.33 | DKD                | Based on the method of "Object Detection at 200 Frames Per Second"                           | [pth](https://adlik-yolov5.oss-cn-beijing.aliyuncs.com/yolov5s-distill-39.3.pt) &#124; [onnx](https://adlik-yolov5.oss-cn-beijing.aliyuncs.com/yolov5s-distill-39.3.onnx)            |  -   |
+| ResNet50-81.33 | KD & DKD                | First by KD method and then by DKD method with two teachers                           | [oneflow](https://adlik-yolov5.oss-cn-beijing.aliyuncs.com/yolov5s-distill-39.3.pt)           |  81.33   |
 
 ## Object detection
 
