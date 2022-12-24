@@ -25,6 +25,11 @@
 
 When using the above models for inference, please note that both mobilenetV1 and resnet101 are trained with outputs with 1001 classification and 0-index in outputs is background. Besides, do not normalize input images when inferring the above two models. In model optimizer, the related codes are [here](https://github.com/Adlik/model_optimizer/blob/master/src/model_optimizer/utils/imagenet_preprocessing.py#:~:text=return-,image_normalization(img),-Footer).
 
+## Classification with distillation
+| Model         | Distillation strategy           | Introduction                                                 | Pretrain weight                  |
+| ------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ 
+| ResNet50-81.33 | DKD                | Based on the method of "Object Detection at 200 Frames Per Second"                           | [pth](https://adlik-yolov5.oss-cn-beijing.aliyuncs.com/yolov5s-distill-39.3.pt) &#124; [onnx](https://adlik-yolov5.oss-cn-beijing.aliyuncs.com/yolov5s-distill-39.3.onnx)            |  -   |
+
 ## Object detection
 
 | Model         | Compression strategy           | Introduction                                                 | Pretrain weight                                              | box AP |
