@@ -2,6 +2,7 @@
 
 ## Content
 
+- Foundation model
 - Object detection
 - Classification
 - Instance segmentation
@@ -25,11 +26,17 @@
 
 When using the above models for inference, please note that both mobilenetV1 and resnet101 are trained with outputs with 1001 classification and 0-index in outputs is background. Besides, do not normalize input images when inferring the above two models. In model optimizer, the related codes are [here](https://github.com/Adlik/model_optimizer/blob/master/src/model_optimizer/utils/imagenet_preprocessing.py#:~:text=return-,image_normalization(img),-Footer).
 
+## Foundation model
+
+| Model         | Training strategy           | Introduction                                                 | Pretrain weight                                              | top1 acc |
+| ------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | -------- |
+| ViT-SG | Pretrain and finetune                 | To be a teacher model in the downstream classification with distillation                         | [oneflow](https://adlik-models.oss-cn-beijing.aliyuncs.com/Adlik_ViT_SG.zip)           |  86.046   |
+
 ## Classification with distillation
 
 | Model         | Distillation strategy           | Introduction                                                 | Pretrain weight                                              | top1 acc |
 | ------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | -------- |
-| ResNet50-81.33 | KD & DKD                 | First by KD method and then by DKD method with two teachers                         | [oneflow](https://adlik-yolov5.oss-cn-beijing.aliyuncs.com/yolov5s-distill-39.3.pt)           |  81.33   |
+| ResNet50-81.33 | KD & DKD                 | First by KD method and then by DKD method with two teachers                         | [oneflow](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet50_dkd.zip)           |  81.33   |
 
 ## Object detection
 
