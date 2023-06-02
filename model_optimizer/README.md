@@ -24,7 +24,7 @@
 
 ### inference
 
-When using the above models for inference, please note that both mobilenetV1 and resnet101 are trained with outputs with 1001 classification and 0-index in outputs is background. Besides, do not normalize input images when inferring the above two models. In model optimizer, the related codes are [here](https://github.com/Adlik/model_optimizer_tf/blob/master/src/model_optimizer_tf/utils/imagenet_preprocessing.py#:~:text=return-,image_normalization(img),-Footer).
+When using the above models for inference, please note that both mobilenetV1 and resnet101 are trained with outputs with 1001 classification and 0-index in outputs is background. Besides, do not normalize input images when inferring the above two models. In model optimizer, the related codes are in [model_optimizer_tf](https://github.com/Adlik/model_optimizer_tf/blob/master/src/model_optimizer_tf/utils/imagenet_preprocessing.py#:~:text=return-,image_normalization(img),-Footer).
 
 ## Foundation model
 
@@ -45,6 +45,8 @@ When using the above models for inference, please note that both mobilenetV1 and
 |  --------------- | ----------------------------- | -------------------------- | -------------------------- | ------------------------------- |
 | ResNet50-W3A4-77.34  |    LSQ + distillation      |      Quantize the model which weight is 3bit and activation is 4bit using LSQ algorithm and distill using resnet50d in Timm.  We use our implementation of the python simulator to evaluate the accuracy of low-bit models    | [jit](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet50best_qat_quant_W3A4.jit)        |      77.34       |
 | ResNet50-W3A4-qat-77.34 |  LSQ + distillation     |    The qat model without using convert_fx function, which can be used to evaluate   |     [tar](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet50best-student.pth.tar)   |  77.34 |
+
+We provide training and quantization code in [model_optimizer](https://github.com/Adlik/model_optimizer) to reproduce the above results. You can also download the model directly for testing.
 
 ## Object detection
 
