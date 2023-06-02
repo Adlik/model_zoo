@@ -37,6 +37,14 @@ When using the above models for inference, please note that both mobilenetV1 and
 | Model         | Distillation strategy           | Introduction                                                 | Pretrain weight                                              | top1 acc |
 | ------------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | -------- |
 | ResNet50-81.33 | KD & DKD                 | First by KD method and then by DKD method with two teachers                         | [oneflow](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet50_dkd.zip)           |  81.33   |
+| ResNet50-80.754 |  KD                    |  Use resnet50d in Timm as the teacher to distill the resnet50    |    [tar](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet50best-base.pth.tar)    |    80.754     |
+
+## Classification with quantization
+
+| Model         | Quantization strategy         | Introduction                                                  | Pretrain weight                                              | top1 acc  |
+|  --------------- | ----------------------------- | -------------------------- | -------------------------- | ------------------------------- |
+| ResNet50-W3A4-77.34  |    LSQ + distillation      |      Quantize the model which weight is 3bit and activation is 4bit using LSQ algorithm and distill using resnet50d in Timm.  We use our implementation of the python simulator to evaluate the accuracy of low-bit models    | [jit](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet50best_qat_quant_W3A4.jit)        |      77.34       |
+| ResNet50-W3A4-qat-77.34 |  LSQ + distillation     |    The qat model without using convert_fx function, which can be used to evaluate   |     [tar](https://adlik-models.oss-cn-beijing.aliyuncs.com/resnet50best-student.pth.tar)   |  77.34 |
 
 ## Object detection
 
@@ -57,4 +65,5 @@ When using the above models for inference, please note that both mobilenetV1 and
 Table Notes:
 
 - Refer to [model optimizer](https://github.com/Adlik/model_optimizer) for more information.
+- Refer to [model_optimizer_tf](https://github.com/Adlik/model_optimizer_tf) for details.
 - Refer to [Adlik YOLOv5](https://github.com/Adlik/yolov5) for details.
