@@ -24,7 +24,7 @@
 
 ### inference
 
-When using the above models for inference, please note that both mobilenetV1 and resnet101 are trained with outputs with 1001 classification and 0-index in outputs is background. Besides, do not normalize input images when inferring the above two models. In model optimizer, the related codes are [here](https://github.com/Adlik/model_optimizer/blob/master/src/model_optimizer/utils/imagenet_preprocessing.py#:~:text=return-,image_normalization(img),-Footer).
+When using the above models for inference, please note that both mobilenetV1 and resnet101 are trained with outputs with 1001 classification and 0-index in outputs is background. Besides, do not normalize input images when inferring the above two models. In model optimizer, the related codes are [here](https://github.com/Adlik/model_optimizer_tf/blob/master/src/model_optimizer_tf/utils/imagenet_preprocessing.py#:~:text=return-,image_normalization(img),-Footer).
 
 ## Foundation model
 
