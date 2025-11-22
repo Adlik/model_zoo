@@ -11,7 +11,7 @@ Adlik model zoo provides related pre-training models for model optimization and 
 | Model optimizer | • Support image classification object detection and instance segmentation model<br />|
 |• Support model optimization methods such as pruning and knowledge distillation<br />• Support quantification on different inference engines ||
 | SmoothQuant+| • 4-bit weight-only quantization models of Code Llama family used by vLLM|
-|• Including Code Llama-7B, Code Llama-13B, Code Llama-34B||
+|• Including Code Llama-7B, Code Llama-13B, Code Llama-34B, Qwen3||
 
 ## License
 
